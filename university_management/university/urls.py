@@ -4,7 +4,7 @@ from .views import *
 
 router = DefaultRouter()
 
-router.register('departments',DepartmentViewSet, basename='department')
+router.register('departments',DepartmentViewSet)
 
 urlpatterns = [
     path('',include(router.urls)),
