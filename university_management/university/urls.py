@@ -5,6 +5,7 @@ from .views import *
 router = DefaultRouter()
 
 router.register('departments',DepartmentViewSet)
+router.register('teachers',TeacherViewSet)
 
 urlpatterns = [
     path('',include(router.urls)),
