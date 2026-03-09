@@ -3,3 +3,7 @@ from .models import *
 # Register your models here.
 
 admin.site.register(Department)
+
+@admin.register(Teacher)
+class TeacherAdmin(admin.ModelAdmin):
+    list_display = ['name','department']
