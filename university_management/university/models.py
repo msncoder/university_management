@@ -9,3 +9,14 @@ class Department(models.Model):
         return self.name
     
     
+class Teacher(models.Model):
+    name = models.CharField(max_length=100)
+    department = models.ForeignKey(
+        Department,
+        on_delete=models.CASCADE,
+        related_name='teachers'
+        )
+
+    def __str__(self) -> str:
+        return self.name
+    
